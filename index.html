@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>BAJO CERO</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    
+    <!-- Music Control Button Styles -->
+    <style>
+        #audioControl {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #f1f1f1;
+            border: none;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Music Background Start -->
+    <audio id="backgroundMusic" loop>
+        <source src="audio/Y2meta.app - Ukulele - Bensound (128 kbps).mp3" type="audio/mpeg">
+        Tu navegador no soporta la reproducción de audio.
+    </audio>
+    <!-- Music Background End -->
+
+    <!-- Button to control music playback -->
+    <button id="audioControl">Play</button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const audio = document.getElementById('backgroundMusic');
+            const audioControl = document.getElementById('audioControl');
+
+            audioControl.addEventListener('click', () => {
+                if (audio.paused) {
+                    audio.play();
+                    audioControl.textContent = 'Pause';
+                } else {
+                    audio.pause();
+                    audioControl.textContent = 'Play';
+                }
+            });
+        });
+    </script>
+
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-primary py-3 d-none d-md-block">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-lg-left mb-2 mb-lg-0">
+                    <div class="d-inline-flex align-items-center">
+                        <a class="text-white pr-3" href="/faq">Preguntas Frecuentes</a>
+                        <span class="text-white">|</span>
+                        <a class="text-white px-3" href="/ayuda">Ayuda</a>
+                        <span class="text-white">|</span>
+                        <a class="text-white pl-3" href="/soporte">Soporte</a>
+                    </div>
+                </div>
+                <div class="col-md-6 text-center text-lg-right">
+                    <div class="d-inline-flex align-items-center">
+                        <a class="btn btn-outline-secondary btn-social mr-2" href="https://twitter.com/BajoCeroHelados" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a class="btn btn-outline-secondary btn-social mr-2" href="https://facebook.com/BajoCeroHelados" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a class="btn btn-outline-secondary btn-social mr-2" href="https://linkedin.com/company/BajoCeroHelados" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a class="btn btn-outline-secondary btn-social" href="https://instagram.com/BajoCeroHelados" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a class="btn btn-outline-secondary btn-social" href="https://youtube.com/BajoCeroHelados" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+    <!-- Navbar Start -->
+    <div class="container-fluid position-relative nav-bar p-0">
+        <div class="container-lg position-relative p-0 px-lg-3" style="z-index: 9;">
+            <nav class="navbar navbar-expand-lg bg-white navbar-light shadow p-lg-0">
+                <a href="index.html" class="navbar-brand d-block d-lg-none">
+                    <h1 class="m-0 display-4 text-primary"><span class="text-secondary">BAJO</span>CERO</h1>
+                </a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                    <div class="navbar-nav ml-auto py-0">
+                        <a href="index.html" class="nav-item nav-link active">INICIO</a>
+                        <a href="about.html" class="nav-item nav-link">NOSOTROS</a>
+                        <a href="product.html" class="nav-item nav-link">PRODUCTOS</a>
+                    </div>
+                    <a href="index.html" class="navbar-brand mx-5 d-none d-lg-block">
+                        <h1 class="m-0 display-4 text-primary"><span class="text-secondary">BAJO</span>CERO</h1>
+                    </a>
+                    <div class="navbar-nav mr-auto py-0">
+                        <a href="service.html" class="nav-item nav-link">SERVICIO</a>
+                        <a href="gallery.html" class="nav-item nav-link">GALERIA</a>
+                        <a href="contact.html" class="nav-item nav-link">CONTACTO</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0 mb-5 pb-5">
+        <div id="header-carousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="w-100" src="img/carousel-1.jpg" alt="Image">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h4 class="text-white text-uppercase mb-md-3">TRADICIONAL & DELICIOSO</h4>
+                            <h1 class="display-3 text-white mb-md-4">No resistiras la tentacion a probarlos desde 1950</h1>
+                            <a href="" class="btn btn-primary py-md-3 px-md-5 mt-2">Mas Informacion</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="w-100" src="img/carousel-2.jpg" alt="Image">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h4 class="text-white text-uppercase mb-md-3">TRADICIONAL & DELICIOSO</h4>
+                            <h1 class="display-3 text-white mb-md-4">Elaborado con nuestra propia leche organica</h1>
+                            <a href="" class="btn btn-primary py-md-3 px-md-5 mt-2">Mas Informacion</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#header-carousel" data-slide="prev">
+                <div class="btn btn-secondary px-0" style="width: 45px; height: 45px;">
+                    <span class="carousel-control-prev-icon mb-n1"></span>
+                </div>
+            </a>
+            <a class="carousel-control-next" href="#header-carousel" data-slide="next">
+                <div class="btn btn-secondary px-0" style="width: 45px; height: 45px;">
+                    <span class="carousel-control-next-icon mb-n1"></span>
+                </div>
+            </a>
+        </div>
+    </div>
+    <!-- Carousel End -->
+
+    <!-- About Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-7">
+                    <h1 class="section-title position-relative text-center mb-5">Helado tradicional y delicioso desde 1950</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 py-5">
+                    <h4 class="font-weight-bold mb-3">Sobre nosotros</h4>
+                    <h5 class="text-muted mb-3">¡Bienvenidos a nuestra heladería! Sumérgete en un mundo de sabores auténticos y refrescantes con nuestros helados tradicionales.</h5>
+                    <p>Aquí, cada bocado es una explosión de historia y tradición, elaborados con ingredientes frescos y naturales. Desde los clásicos de siempre hasta combinaciones únicas, nuestros helados son el escape perfecto para el calor y la mejor manera de consentirte. Ven y descubre por qué nuestros helados son los favoritos de todos. ¡Te esperamos para endulzar tu día con una sonrisa!</p>
+                    <a href="" class="btn btn-secondary mt-2">Mas informacion</a>
+                </div>
+                <div class="col-lg-4" style="min-height: 400px;">
+                    <div class="position-relative h-100 rounded overflow-hidden">
+                        <img class="position-absolute w-100 h-300" src="img/inicio.jpg" style="object-fit: cover;">
+                    </div>
+                </div>
+                <div class="col-lg-4 py-5">
+                    <h4 class="font-weight-bold mb-3">Nuestras Caracteristicas</h4>
+                    <p>En nuestra heladería, cada visita es una experiencia única gracias a nuestros helados artesanales elaborados con ingredientes frescos y naturales. Ofrecemos una amplia variedad de sabores, incluyendo opciones veganas y sin gluten, para satisfacer todos los paladares. Nuestro ambiente acogedor, combinado con un servicio al cliente excepcional, garantiza que cada momento sea especial. Además, nos enorgullece nuestra innovación constante con sabores sorprendentes y nuestro compromiso con la sostenibilidad. Ven y disfruta de helados personalizados y promociones especiales que harán que quieras volver una y otra vez. ¡Te esperamos!</p>
+                    <h5 class="text-muted mb-3"><i class="fa fa-check text-secondary mr-3"></i>Ingredientes Naturales y Frescos</h5>
+                    <h5 class="text-muted mb-3"><i class="fa fa-check text-secondary mr-3"></i>Variedad de Sabores</h5>
+                    <h5 class="text-muted mb-3"><i class="fa fa-check text-secondary mr-3"></i>Productos Artesanales</h5>
+                    <a href="" class="btn btn-primary mt-2">Mas Informacion</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+    <!-- Promotion Start -->
+    <div class="container-fluid my-5 py-5 px-0">
+        <div class="row bg-primary m-0">
+            <div class="col-md-6 px-0" style="min-height: 500px;">
+                <div class="position-relative h-100">
+                    <img class="position-absolute w-100 h-100" src="img/promotion.jpg" style="object-fit: cover;" alt="Promoción">
+                    <button type="button" class="btn-play" data-toggle="modal" data-src="https://www.youtube.com/embed/a7MIRIZroHM?si=XOZPUeCtMg4Q3Vfa" data-target="#videoModal">
+                        <span>▶</span>
+                    </button>
+                </div>
+            </div>
+            <div class="col-md-6 py-5 py-md-0 px-0">
+                <div class="h-100 d-flex flex-column align-items-center justify-content-center text-center p-5">
+                    <div class="d-flex align-items-center justify-content-center bg-white rounded-circle mb-4" style="width: 100px; height: 100px;">
+                        <h3 class="font-weight-bold text-secondary mb-0">+</h3>
+                    </div>
+                    <h3 class="font-weight-bold text-white mt-3 mb-4">Nuestra filosofía</h3>
+                    <p class="text-white mb-4">Creemos en la importancia de preservar las tradiciones mientras nos adaptamos a los tiempos modernos. Por eso, además de nuestros sabores tradicionales, innovamos constantemente para ofrecer opciones que satisfagan todos los gustos y necesidades dietéticas, incluyendo helados veganos y sin lactosa.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Promotion End -->
+
+    <!-- Video Modal Start -->
+    <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="" id="video" allowscriptaccess="always" allow="autoplay"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Video Modal End -->
+
+    <script>
+        $(document).ready(function() {
+            var $videoSrc;  
+            $('.btn-play').click(function() {
+                $videoSrc = $(this).data("src");
+            });
+            $('#videoModal').on('shown.bs.modal', function (e) {
+                $("#video").attr('src', $videoSrc + "?autoplay=1&modestbranding=1&showinfo=0"); 
+            });
+            $('#videoModal').on('hide.bs.modal', function (e) {
+                $("#video").attr('src', ""); 
+            });
+        });
+    </script>
+
+    <!-- Services Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h1 class="section-title position-relative mb-5">Los mejores servicios que brindamos a nuestros clientes</h1>
+                </div>
+                <div class="col-lg-6 mb-5 mb-lg-0 pb-5 pb-lg-0"></div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="owl-carousel service-carousel">
+                        <div class="service-item">
+                            <div class="service-img mx-auto">
+                                <img class="rounded-circle w-100 h-100 bg-light p-3" src="img/service-1.jpg" style="object-fit: cover;">
+                            </div>
+                            <div class="position-relative text-center bg-light rounded p-4 pb-5" style="margin-top: -75px;">
+                                <h5 class="font-weight-semi-bold mt-5 mb-3 pt-5">Mantenimiento de calidad</h5>
+                                <p>La calidad de nuestros helados comienza con los ingredientes que usamos. Seleccionamos ingredientes frescos y locales siempre que es posible, garantizando así no solo un sabor excepcional, sino también un compromiso con la sostenibilidad y la comunidad local.</p>
+                                <a href="" class="border-bottom border-secondary text-decoration-none text-secondary">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-img mx-auto">
+                                <img class="rounded-circle w-100 h-100 bg-light p-3" src="img/service-2.jpg" style="object-fit: cover;">
+                            </div>
+                            <div class="position-relative text-center bg-light rounded p-4 pb-5" style="margin-top: -75px;">
+                                <h5 class="font-weight-semi-bold mt-5 mb-3 pt-5">Enfoque individual</h5>
+                                <p>Cada helado puede ser una creación única. Ofrecemos una variedad de sabores y toppings para que nuestros clientes puedan diseñar el helado perfecto para ellos. Además, nuestras opciones de personalización permiten a nuestros clientes experimentar y crear combinaciones que solo ellos podrían imaginar.</p>
+                                <a href="" class="border-bottom border-secondary text-decoration-none text-secondary">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-img mx-auto">
+                                <img class="rounded-circle w-100 h-100 bg-light p-3" src="img/service-3.jpg" style="object-fit: cover;">
+                            </div>
+                            <div class="position-relative text-center bg-light rounded p-4 pb-5" style="margin-top: -75px;">
+                                <h5 class="font-weight-semi-bold mt-5 mb-3 pt-5">Helado de celebracion</h5>
+                                <p>Un helado de celebración, estamos aquí para hacer de cada momento algo especial. Ofrecemos una amplia gama de helados artesanales y realizamos entregas a cualquier punto</p>
+                                <a href="" class="border-bottom border-secondary text-decoration-none text-secondary">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-img mx-auto">
+                                <img class="rounded-circle w-100 h-100 bg-light p-3" src="img/service-4.jpg" style="object-fit: cover;">
+                            </div>
+                            <div class="position-relative text-center bg-light rounded p-4 pb-5" style="margin-top: -75px;">
+                                <h5 class="font-weight-semi-bold mt-5 mb-3 pt-5">Entrega a cualquier punto</h5>
+                                <p>¡No te preocupes por moverte de casa! En nuestra heladería te llevamos el helado a cualquier lugar que necesites. ¡Pide tu sabor favorito y nosotros nos encargamos del resto!</p>
+                                <a href="" class="border-bottom border-secondary text-decoration-none text-secondary">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Services End -->
+
+    <!-- Portfolio Start -->
+    <div class="container-fluid my-5 py-5 px-0">
+        <div class="row justify-content-center m-0">
+            <div class="col-lg-5">
+                <h1 class="section-title position-relative text-center mb-5">Delicioso helado elaborado con nuestra propia leche ecológica</h1>
+            </div>
+        </div>
+        <div class="row m-0 portfolio-container">
+            <div class="col-lg-4 col-md-6 p-0 portfolio-item">
+                <div class="position-relative overflow-hidden">
+                    <img class="img-fluid w-100" src="img/portfolio-1.jpg" alt="">
+                    <a class="portfolio-btn" href="img/portfolio-1.jpg" data-lightbox="portfolio">
+                        <i class="fa fa-plus text-primary" style="font-size: 60px;"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 p-0 portfolio-item">
+                <div class="position-relative overflow-hidden">
+                    <img class="img-fluid w-100" src="img/portfolio-2.jpg" alt="">
+                    <a class="portfolio-btn" href="img/portfolio-2.jpg" data-lightbox="portfolio">
+                        <i class="fa fa-plus text-primary" style="font-size: 60px;"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 p-0 portfolio-item">
+                <div class="position-relative overflow-hidden">
+                    <img class="img-fluid w-100" src="img/portfolio-3.jpg" alt="">
+                    <a class="portfolio-btn" href="img/portfolio-3.jpg" data-lightbox="portfolio">
+                        <i class="fa fa-plus text-primary" style="font-size: 60px;"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 p-0 portfolio-item">
+                <div class="position-relative overflow-hidden">
+                    <img class="img-fluid w-100" src="img/portfolio-4.jpg" alt="">
+                    <a class="portfolio-btn" href="img/portfolio-4.jpg" data-lightbox="portfolio">
+                        <i class="fa fa-plus text-primary" style="font-size: 60px;"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 p-0 portfolio-item">
+                <div class="position-relative overflow-hidden">
+                    <img class="img-fluid w-100" src="img/portfolio-5.jpg" alt="">
+                    <a class="portfolio-btn" href="img/portfolio-5.jpg" data-lightbox="portfolio">
+                        <i class="fa fa-plus text-primary" style="font-size: 60px;"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 p-0 portfolio-item">
+                <div class="position-relative overflow-hidden">
+                    <img class="img-fluid w-100" src="img/portfolio-6.jpg" alt="">
+                    <a class="portfolio-btn" href="img/portfolio-6.jpg" data-lightbox="portfolio">
+                        <i class="fa fa-plus text-primary" style="font-size: 60px;"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio End -->
+
+    <!-- Products Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h1 class="section-title position-relative mb-5">Los mejores precios que ofrecemos para los amantes de los helados</h1>
+                </div>
+                <div class="col-lg-6 mb-5 mb-lg-0 pb-5 pb-lg-0"></div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="owl-carousel product-carousel">
+                        <div class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
+                            <div class="bg-primary mt-n5 py-3" style="width: 80px;">
+                                <h4 class="font-weight-bold text-white mb-0">$99</h4>
+                            </div>
+                            <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3" style="width: 150px; height: 150px;">
+                                <img class="rounded-circle w-100 h-100" src="img/product-1.jpg" style="object-fit: cover;">
+                            </div>
+                            <h5 class="font-weight-bold mb-4">Helado de vainilla</h5>
+                            <a href="" class="btn btn-sm btn-secondary">Ordena Ahora</a>
+                        </div>
+                        <div class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
+                            <div class="bg-primary mt-n5 py-3" style="width: 80px;">
+                                <h4 class="font-weight-bold text-white mb-0">$99</h4>
+                            </div>
+                            <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3" style="width: 150px; height: 150px;">
+                                <img class="rounded-circle w-100 h-100" src="img/product-2.jpg" style="object-fit: cover;">
+                            </div>
+                            <h5 class="font-weight-bold mb-4">Helado de chocolate</h5>
+                            <a href="" class="btn btn-sm btn-secondary">Ordena Ahora</a>
+                        </div>
+                        <div class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
+                            <div class="bg-primary mt-n5 py-3" style="width: 80px;">
+                                <h4 class="font-weight-bold text-white mb-0">$99</h4>
+                            </div>
+                            <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3" style="width: 150px; height: 150px;">
+                                <img class="rounded-circle w-100 h-100" src="img/product-3.jpg" style="object-fit: cover;">
+                            </div>
+                            <h5 class="font-weight-bold mb-4">Helado de capuchino</h5>
+                            <a href="" class="btn btn-sm btn-secondary">Ordena Ahora</a>
+                        </div>
+                        <div class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
+                            <div class="bg-primary mt-n5 py-3" style="width: 80px;">
+                                <h4 class="font-weight-bold text-white mb-0">$99</h4>
+                            </div>
+                            <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3" style="width: 150px; height: 150px;">
+                                <img class="rounded-circle w-100 h-100" src="img/product-4.jpg" style="object-fit: cover;">
+                            </div>
+                            <h5 class="font-weight-bold mb-4">Helado de arandano</h5>
+                            <a href="" class="btn btn-sm btn-secondary">Ordena Ahora</a>
+                        </div>
+                        <div class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
+                            <div class="bg-primary mt-n5 py-3" style="width: 80px;">
+                                <h4 class="font-weight-bold text-white mb-0">$99</h4>
+                            </div>
+                            <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3" style="width: 150px; height: 150px;">
+                                <img class="rounded-circle w-100 h-100" src="img/product-5.jpg" style="object-fit: cover;">
+                            </div>
+                            <h5 class="font-weight-bold mb-4">Helao de fresa</h5>
+                            <a href="" class="btn btn-sm btn-secondary">Ordena Ahora</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Products End -->
+
+    <!-- Team Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h1 class="section-title position-relative mb-5">Los Chefs de Helados Experimentados y Más Famosos</h1>
+                </div>
+                <div class="col-lg-6 mb-5 mb-lg-0 pb-5 pb-lg-0"></div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="owl-carousel team-carousel">
+                        <div class="team-item">
+                            <div class="team-img mx-auto">
+                                <img class="rounded-circle w-100 h-100" src="img/team-1.jpg" style="object-fit: cover;">
+                            </div>
+                            <div class="position-relative text-center bg-light rounded px-4 py-5" style="margin-top: -100px;">
+                                <h3 class="font-weight-bold mt-5 mb-3 pt-5">Cédric Grolet</h3>
+                                <h6 class="text-uppercase text-muted mb-4">Repostero</h6>
+                                <div class="d-flex justify-content-center pt-1">
+                                   <a class="btn btn-outline-secondary btn-social mr-2" href="https://twitter.com/CedricGrolet"><i class="fab fa-twitter"></i></a>
+                                   <a class="btn btn-outline-secondary btn-social mr-2" href="https://www.facebook.com/cedricgrolet"><i class="fab fa-facebook-f"></i></a>
+                                   <a class="btn btn-outline-secondary btn-social mr-2" href="https://www.linkedin.com/in/cedric-grolet-773b40160"><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team-item">
+                            <div class="team-img mx-auto">
+                                <img class="rounded-circle w-100 h-100" src="img/team-2.jpg" style="object-fit: cover;">
+                            </div>
+                            <div class="position-relative text-center bg-light rounded px-4 py-5" style="margin-top: -100px;">
+                                <h3 class="font-weight-bold mt-5 mb-3 pt-5">Christina Tosi</h3>
+                                <h6 class="text-uppercase text-muted mb-4">Repostero</h6>
+                                <div class="d-flex justify-content-center pt-1">
+                                    <a class="btn btn-outline-secondary btn-social mr-2" href="https://twitter.com/christinatosi"><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-outline-secondary btn-social mr-2" href="https://www.facebook.com/milkbarstore"><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-outline-secondary btn-social mr-2" href="https://www.linkedin.com/company/milk-bar"><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team-item">
+                            <div class="team-img mx-auto">
+                                <img class="rounded-circle w-100 h-100" src="img/team-3.jpg" style="object-fit: cover;">
+                            </div>
+                            <div class="position-relative text-center bg-light rounded px-4 py-5" style="margin-top: -100px;">
+                                <h3 class="font-weight-bold mt-5 mb-3 pt-5">Will Goldfarb</h3>
+                                <h6 class="text-uppercase text-muted mb-4">Repostero</h6>
+                                <div class="d-flex justify-content-center pt-1">
+                                    <a class="btn btn-outline-secondary btn-social mr-2" href="https://twitter.com/willtgoldfarb"><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-outline-secondary btn-social mr-2" href="https://www.facebook.com/room4dessertbali"><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-outline-secondary btn-social mr-2" href="https://www.linkedin.com/in/will-goldfarb-173b40160"><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team-item">
+                            <div class="team-img mx-auto">
+                                <img class="rounded-circle w-100 h-100" src="img/team-4.jpg" style="object-fit: cover;">
+                            </div>
+                            <div class="position-relative text-center bg-light rounded px-4 py-5" style="margin-top: -100px;">
+                                <h3 class="font-weight-bold mt-5 mb-3 pt-5">René Frank</h3>
+                                <h6 class="text-uppercase text-muted mb-4">Repostero</h6>
+                                <div class="d-flex justify-content-center pt-1">
+                                    <a class="btn btn-outline-secondary btn-social mr-2" href="https://twitter.com/ReneFrank"><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-outline-secondary btn-social mr-2" href="https://www.facebook.com/rene.frank.chef"><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-outline-secondary btn-social mr-2" href="https://www.linkedin.com/in/ren%C3%A9-frank-413456182"><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Team End -->
+
+    <!-- Testimonial Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <h1 class="section-title position-relative text-center mb-5">Los clientes dicen sobre nuestro famoso helado</h1>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="owl-carousel testimonial-carousel">
+                        <div class="text-center">
+                            <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+                            <h4 class="font-weight-light mb-4">"La heladería Bajo Cero ha redefinido mi concepto de postres congelados. Sus sabores son innovadores y la textura es impecable. Cada visita es una experiencia culinaria única, y la atención al cliente es de primera clase. ¡Altamente recomendable!"</h4>
+                            <img class="img-fluid mx-auto mb-3" src="img/testimonial-1.jpg" alt="">
+                            <h5 class="font-weight-bold m-0">Javier Ramírez</h5>
+                            <span>Chef Profesional</span>
+                        </div>
+                        <div class="text-center">
+                            <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+                            <h4 class="font-weight-light mb-4">"Como ingeniero de alimentos, aprecio la calidad y frescura de los ingredientes que usa Bajo Cero. Sus helados no solo son deliciosos, sino también saludables. La variedad de opciones y el compromiso con la excelencia hacen de esta heladería mi favorita."</h4>
+                            <img class="img-fluid mx-auto mb-3" src="img/testimonial-2.jpg" alt="">
+                            <h5 class="font-weight-bold m-0">Carlos Alberto Mendoza,</h5>
+                            <span>Profession</span>
+                        </div>
+                        <div class="text-center">
+                            <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+                            <h4 class="font-weight-light mb-4">"Bajo Cero ofrece helados que son una delicia tanto para el paladar como para la salud. La selección de sabores es impresionante y satisface todos los gustos. Además, la heladería tiene opciones bajas en azúcar y aptas para dietas especiales, lo cual es un gran plus."</h4>
+                            <img class="img-fluid mx-auto mb-3" src="img/testimonial-3.jpg" alt="">
+                            <h5 class="font-weight-bold m-0">Pedro Martínez</h5>
+                            <span>Nutricionista</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+
+    <!-- Menu Download Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <h1 class="section-title position-relative text-center mb-5">Descarga el menú de nuestra heladería</h1>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-4 text-center">
+                    <a href="Menu_Heladeria_Bajo_Cero.pdf" class="btn btn-sm btn-secondary">Descarga Aqui</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Menu Download End -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid footer bg-light py-5" style="margin-top: 90px;">
+        <div class="container text-center py-5">
+            <div class="row">
+                <div class="col-12 mb-4">
+                    <a href="index.html" class="navbar-brand m-0">
+                        <h1 class="m-0 mt-n2 display-4 text-primary"><span class="text-secondary">BAJO</span>CERO</h1>
+                    </a>
+                </div>
+                <div class="col-12 mb-4">
+                    <div class="d-flex justify-content-center">
+                        <a class="btn btn-outline-secondary btn-social mr-2" href="https://twitter.com/BajoCeroHelados"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-secondary btn-social mr-2" href="https://facebook.com/BajoCeroHelados"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-secondary btn-social mr-2" href="https://linkedin.com/company/BajoCeroHelados"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-outline-secondary btn-social" href="https://instagram.com/BajoCeroHelados"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-12 mt-2 mb-4">
+                    <div class="row">
+                        <div class="col-sm-6 text-center text-sm-right border-right mb-3 mb-sm-0">
+                            <h5 class="font-weight-bold mb-2">CONTACTENOS</h5>
+                            <p class="mb-2">123 SAN ANTONIO, MOQUEGUA, PERU</p>
+                            <p class="mb-0">+51 988 778 520</p>
+                        </div>
+                        <div class="col-sm-6 text-center text-sm-left">
+                            <h5 class="font-weight-bold mb-2">HORARIO</h5>
+                            <p class="mb-2">Lun – Sab, 8AM – 5PM</p>
+                            <p class="mb-0">Domingo: Cerrado</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <p class="m-0">&copy; <a href="#">Domain</a>. All Rights Reserved. Designed by <a href="https://htmlcodex.com">HTML Codex</a>
+                    </p>
+                    <span>GRISSEL DANERI LAQUIHUANACO VIZCACHO</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-secondary px-2 back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
